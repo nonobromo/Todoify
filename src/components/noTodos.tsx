@@ -1,0 +1,10 @@
+function NoTodos() {
+  return (
+    <div className="container bg-light d-flex flex-column mt-5">
+      <h3>You have no further tasks for now!</h3>
+      <span>Go do something Fun🎉</span>
+    </div>
+  );
+}
+
+export default NoTodos;
