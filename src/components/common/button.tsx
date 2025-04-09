@@ -2,7 +2,7 @@ import { ComponentPropsWithoutRef } from "react";
 
 type ButtonProps = {
   text: string;
-  buttonType:
+  buttonType?:
     | "btn btn-primary"
     | "btn btn-secondary"
     | "btn btn-success"
@@ -10,7 +10,9 @@ type ButtonProps = {
     | "btn btn-warning"
     | "btn btn-info"
     | "btn btn-light"
-    | "btn btn-dark";
+    | "btn btn-dark"
+    | "btn btn-outline-light"
+    | "btn btn-outline-secondary";
 } & ComponentPropsWithoutRef<"button">;
 
 function Button({ text, buttonType, ...props }: ButtonProps) {

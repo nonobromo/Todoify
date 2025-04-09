@@ -6,10 +6,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import App from "./App.tsx";
 import "./App.css";
 import { TodoProvider } from "./context/todosState-contex.tsx";
+import { BrowserRouter } from "react-router-dom";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <TodoProvider>
-      <App />
-    </TodoProvider>
+    <BrowserRouter>
+      <TodoProvider>
+        <App />
+      </TodoProvider>
+    </BrowserRouter>
   </StrictMode>
 );

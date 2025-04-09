@@ -61,12 +61,10 @@ function Todo({ todo }: Props) {
         <div className="d-flex gap-2 ms-2">
           <i
             className="bi bi-trash-fill text-danger fs-3"
-            onClick={deleteTodo}
-          ></i>
+            onClick={deleteTodo}></i>
           <i
             className="bi bi-pencil-square fs-3"
-            onClick={() => setEdit((perv) => !perv)}
-          ></i>
+            onClick={() => setEdit((perv) => !perv)}></i>
         </div>
         <div className="d-flex me-3 btn-group">
           <div className="form-check">
@@ -74,12 +72,10 @@ function Todo({ todo }: Props) {
               <>
                 <i
                   className="bi bi-check2 text-success fs-2"
-                  onClick={editTodo}
-                ></i>
+                  onClick={editTodo}></i>
                 <i
                   className="bi bi-x text-danger fs-2"
-                  onClick={() => setEdit((perv) => !perv)}
-                ></i>
+                  onClick={() => setEdit((perv) => !perv)}></i>
               </>
             ) : (
               <input
@@ -87,6 +83,11 @@ function Todo({ todo }: Props) {
                 className="form-check-input"
                 checked={complete}
                 onChange={finishTodo}
+                style={{
+                  width: "30px",
+                  height: "30px",
+                  border: "2px solid #0D6EFD",
+                }}
               />
             )}
           </div>

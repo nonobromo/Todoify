@@ -4,9 +4,11 @@ import Button from "./common/button";
 import Input from "./common/input";
 import Select from "./common/select";
 import TextArea from "./common/textarea";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
   const { dispatch } = useTodos();
+  const navigate = useNavigate();
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
@@ -34,17 +36,26 @@ function Form() {
         date: new Date().toLocaleDateString(),
       },
     });
-    console.log(title);
     form.reset();
+    navigate("/todos");
   }
 
   return (
     <div className="">
-      <form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
+      <form
+        onSubmit={handleSubmit}
+        className="container d-flex flex-column align-items-center gap-4 mt-3">
         <Input label="Title" id="title" name="title" type="text" />
         <TextArea id="description" label="Description" name="description" />
-        <Select id="categories" name="categories" />
-        <Button text="Submit" buttonType="btn btn-primary" />
+        <Select id="categories" name="categories" label="Category" />
+        <Button
+          text="Submit"
+          style={{
+            backgroundColor: "#1E90FF",
+            color: "#F0F6FC",
+            border: "none",
+          }}
+        />
       </form>
     </div>
   );
