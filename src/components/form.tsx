@@ -44,7 +44,8 @@ function Form() {
     <div className="">
       <form
         onSubmit={handleSubmit}
-        className="container d-flex flex-column align-items-center gap-4 mt-3">
+        className="container d-flex flex-column align-items-center gap-4 mt-3"
+      >
         <Input label="Title" id="title" name="title" type="text" />
         <TextArea id="description" label="Description" name="description" />
         <Select id="categories" name="categories" label="Category" />
