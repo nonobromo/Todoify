@@ -5,7 +5,7 @@ import Input from "./common/input";
 import Select from "./common/select";
 import TextArea from "./common/textarea";
 import { useNavigate } from "react-router-dom";
-
+const categories = ["Home", "Work", "Shopping", "Outdoor", "Other"];
 function Form() {
   const { dispatch } = useTodos();
   const navigate = useNavigate();
@@ -44,16 +44,20 @@ function Form() {
     <div className="">
       <form
         onSubmit={handleSubmit}
-        className="container d-flex flex-column align-items-center gap-4 mt-3"
-      >
+        className="container d-flex flex-column align-items-center gap-4 mt-3">
         <Input label="Title" id="title" name="title" type="text" />
         <TextArea id="description" label="Description" name="description" />
-        <Select id="categories" name="categories" label="Category" />
+        <Select
+          selectIems={categories}
+          id="categories"
+          name="categories"
+          label="Category"
+        />
         <Button
           text="Submit"
           style={{
-            backgroundColor: "#1E90FF",
-            color: "#F0F6FC",
+            backgroundColor: "#FFB200",
+            color: "#000",
             border: "none",
           }}
         />

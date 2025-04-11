@@ -15,8 +15,9 @@ function TextArea({ label, id, rows = 3, ...props }: TextAreaProps) {
         rows={rows}
         {...props}
         style={{
-          backgroundColor: "#f1f1f1",
-          border: "2px solid #D1D5DB",
+          backgroundColor: "#FEEC37",
+          border: "none",
+          borderBottom: "5px solid #FFB200",
           resize: "none",
         }}></textarea>
     </div>

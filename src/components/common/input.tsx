@@ -14,8 +14,9 @@ function Input({ label, id, ...props }: InputProps) {
         {...props}
         className="input"
         style={{
-          backgroundColor: "#f1f1f1",
-          border: "2px solid #D1D5DB",
+          backgroundColor: "#FEEC37",
+          border: "none",
+          borderBottom: "4px solid #FFB200",
           padding: "5px",
         }}
       />

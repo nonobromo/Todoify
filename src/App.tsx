@@ -5,7 +5,7 @@ import Todos from "./components/todos";
 
 function App() {
   return (
-    <div className="d-flex min-vh-100 flex-column mobile-mode bg-dark-subtle">
+    <div className="d-flex min-vh-100 flex-column mobile-mode">
       <Header />
       <Routes>
         <Route path="/" element={<Todos />} />

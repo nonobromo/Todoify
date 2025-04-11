@@ -3,12 +3,11 @@ import { ComponentPropsWithoutRef } from "react";
 type SelectProps = {
   id: string;
   name: string;
+  selectIems: string[];
   label?: string;
 } & ComponentPropsWithoutRef<"select">;
 
-const categories = ["Home", "Work", "Shopping", "Outdoor", "Other"];
-
-function Select({ id, name, label, ...props }: SelectProps) {
+function Select({ id, name, label, selectIems, ...props }: SelectProps) {
   return (
     <div className="d-flex flex-column input">
       <label htmlFor={id}>{label}</label>
@@ -21,7 +20,7 @@ function Select({ id, name, label, ...props }: SelectProps) {
         <option value="" disabled hidden style={{ color: "#1F2937" }}>
           Select a category
         </option>
-        {categories.map((category) => (
+        {selectIems.map((category) => (
           <option key={category} value={category} style={{ color: "#1F2937" }}>
             {category}
           </option>

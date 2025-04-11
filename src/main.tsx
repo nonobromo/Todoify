@@ -7,11 +7,14 @@ import App from "./App.tsx";
 import "./App.css";
 import { TodoProvider } from "./context/todosState-contex.tsx";
 import { BrowserRouter } from "react-router-dom";
+import { CategoriesStateContext } from "./context/categoryState-context.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <TodoProvider>
-        <App />
+        <CategoriesStateContext>
+          <App />
+        </CategoriesStateContext>
       </TodoProvider>
     </BrowserRouter>
   </StrictMode>
