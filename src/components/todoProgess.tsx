@@ -3,7 +3,6 @@ import { useCategoryState } from "../context/categoryState-context";
 import { useTodos } from "../context/todosState-contex";
 import Select from "./common/select";
 
-// type TodoProgresProps = {};
 export const categories = [
   "All",
   "Home",
@@ -15,10 +14,7 @@ export const categories = [
 function TodoProgress() {
   const { todos } = useTodos();
   const { setCurrentCategory } = useCategoryState();
-  const [todoCategory, setTodoCategory] = useState<string>("All");
-  function provideTodoCategory() {
-    setCurrentCategory(todoCategory);
-  }
+
   const completeTodos = todos.filter((todo) => todo.complete === true);
   return (
     <div className="d-flex flex-column gap-3">
@@ -35,8 +31,7 @@ function TodoProgress() {
             name="ctg-select"
             label="Filter By"
             onChange={(e) => {
-              setTodoCategory(e.target.value);
-              provideTodoCategory();
+              setCurrentCategory(e.target.value);
             }}
           />
         </form>

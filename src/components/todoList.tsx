@@ -8,6 +8,7 @@ function TodoList() {
   const filtredTodos = todos.filter((todo) =>
     currentCategory === "All" ? todos : todo.category === currentCategory
   );
+  console.log(currentCategory);
   return (
     <div className="container d-flex justify-content-center auto flex-wrap gap-5">
       {filtredTodos.map((todo) => {

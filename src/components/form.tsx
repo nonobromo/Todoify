@@ -42,9 +42,11 @@ function Form() {
 
   return (
     <div className="">
+      <h1 className="text-center mt-3">Add a todo</h1>
       <form
         onSubmit={handleSubmit}
-        className="container d-flex flex-column align-items-center gap-4 mt-3">
+        className="container d-flex flex-column align-items-center gap-4 mt-3"
+      >
         <Input label="Title" id="title" name="title" type="text" />
         <TextArea id="description" label="Description" name="description" />
         <Select

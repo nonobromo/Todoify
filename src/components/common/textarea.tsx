@@ -15,11 +15,12 @@ function TextArea({ label, id, rows = 3, ...props }: TextAreaProps) {
         rows={rows}
         {...props}
         style={{
-          backgroundColor: "#FEEC37",
+          backgroundColor: "#FFF085",
           border: "none",
           borderBottom: "5px solid #FFB200",
           resize: "none",
-        }}></textarea>
+        }}
+      ></textarea>
     </div>
   );
 }
