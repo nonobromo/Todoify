@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useCategoryState } from "../context/categoryState-context";
 import { useTodos } from "../context/todosState-contex";
 import Select from "./common/select";
